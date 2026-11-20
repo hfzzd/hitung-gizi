@@ -1,0 +1,28 @@
+Contoh menu sehari (dihitung dengan HitungGizi)
+================================================
+
+Sarapan
+  Nasi uduk 150 g (1 piring) — 270 kkal, protein 5,1 g, karbo 46,5 g, lemak 6,8 g
+  Telur ayam rebus 1 butir (50 g) — 77,5 kkal, protein 6,5 g, karbo 0,6 g, lemak 5,5 g
+  Teh manis 1 gelas (200 g) — 80 kkal, protein 0 g, karbo 20 g, lemak 0 g
+
+Makan siang
+  Nasi putih 150 g (1 piring) — 262,5 kkal, protein 4,5 g, karbo 60 g, lemak 0,4 g
+  Ayam goreng 1 potong (85 g) — 212,5 kkal, protein 23,8 g, karbo 0,8 g, lemak 11,9 g
+  Sayur bayam 1 mangkuk (100 g) — 25 kkal, protein 3 g, karbo 3,5 g, lemak 0,5 g
+  Tempe goreng 1 potong (50 g) — 110 kkal, protein 9,5 g, karbo 4 g, lemak 5,5 g
+
+Makan malam
+  Nasi putih 150 g (1 piring) — 262,5 kkal, protein 4,5 g, karbo 60 g, lemak 0,4 g
+  Ikan lele goreng 1 ekor (100 g) — 220 kkal, protein 20 g, karbo 2 g, lemak 14 g
+  Kangkung tumis 1 porsi (100 g) — 60 kkal, protein 3 g, karbo 5 g, lemak 4 g
+
+Camilan
+  Pisang 1 buah (100 g) — 89 kkal, protein 1,1 g, karbo 23 g, lemak 0,3 g
+
+Total sehari: 1669 kkal, protein 81 g, karbohidrat 225,4 g, lemak 49,3 g
+
+Coba sendiri:
+  python3 -m hitung_gizi hitung "nasi putih" 150
+  python3 -m hitung_gizi hitung "telur ayam rebus" --porsi 2
+  python3 -m hitung_gizi daftar --kategori lauk
