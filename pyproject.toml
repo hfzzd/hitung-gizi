@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hitung-gizi"
+version = "0.1.0"
+description = "Kalkulator gizi makanan Indonesia berbasis TKPI: cari makanan, hitung kalori & makro per porsi, catat makan harian."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Hafizd Ammar", email = "hafizdammar@gmail.com" }]
+
+[project.scripts]
+hitung-gizi = "hitung_gizi.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["hitung_gizi*"]
