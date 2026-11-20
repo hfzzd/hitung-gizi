@@ -59,6 +59,17 @@ class TestCLI(unittest.TestCase):
         self.assertIn("150 g (1 piring)", hasil.stdout)
         self.assertIn("262.5 kkal", hasil.stdout)
 
+    def test_hitung_gram_sama_dengan_porsi_tampil_label(self):
+        hasil = self._jalankan("hitung", "nasi putih", "150")
+        self.assertEqual(hasil.returncode, 0)
+        self.assertIn("150 g (1 piring)", hasil.stdout)
+
+    def test_hitung_gram_bukan_porsi_tanpa_label(self):
+        hasil = self._jalankan("hitung", "nasi putih", "100")
+        self.assertEqual(hasil.returncode, 0)
+        self.assertIn("Nasi putih — 100 g", hasil.stdout)
+        self.assertNotIn("(1 piring)", hasil.stdout)
+
     def test_nama_tak_dikenal_exit_bukan_nol(self):
         hasil = self._jalankan("hitung", "pizza", "100")
         self.assertNotEqual(hasil.returncode, 0)

@@ -28,10 +28,29 @@ Contoh hasil:
 ```
 $ python3 -m hitung_gizi hitung "nasi putih" 150
 Nasi putih — 150 g (1 piring)
-  Energi   : 263 kkal
-  Protein  : 4,5 g
-  Karbohidrat: 60,0 g
-  Lemak    : 0,5 g
+  Energi     : 262.5 kkal
+  Protein    : 4.5 g
+  Karbohidrat: 60 g
+  Lemak      : 0.4 g
+```
+
+Tanpa GRAM, dipakai satu porsi umum; berat yang bukan satu porsi tidak
+menampilkan label porsi supaya tidak menyesatkan:
+
+```
+$ python3 -m hitung_gizi hitung "nasi putih"
+Nasi putih — 150 g (1 piring)
+  Energi     : 262.5 kkal
+  Protein    : 4.5 g
+  Karbohidrat: 60 g
+  Lemak      : 0.4 g
+
+$ python3 -m hitung_gizi hitung "nasi putih" 100
+Nasi putih — 100 g
+  Energi     : 175 kkal
+  Protein    : 3 g
+  Karbohidrat: 40 g
+  Lemak      : 0.3 g
 ```
 
 ## Perintah
@@ -52,17 +71,22 @@ Nasi putih — 150 g (1 piring)
   supaya menghitung tidak perlu timbangan.
 - Nilai gizi adalah perkiraan untuk makanan rumahan pada umumnya; cara masak
   (digoreng, direbus, dipanggang) memengaruhi angka sebenarnya.
+- `contoh/contoh-makanan.txt` berisi contoh menu sehari beserta angka
+  gizinya (total 1669 kkal).
 
 ## Rencana
 
-- [x] Day-1: database makanan Indonesia + pencarian + hitung gizi per porsi + CLI dasar
-- [ ] Day-2: catat makan harian + ringkasan vs AKG + unit test + README lengkap
+- [x] Day-1: database makanan Indonesia + pencarian + hitung gizi per porsi + CLI dasar + unit test + README lengkap
+- [ ] Day-2: catat makan harian + ringkasan vs AKG
 
 ## Menjalankan test
 
 ```bash
 python3 -m unittest discover -s tests
 ```
+
+32 test (10 database makanan, 8 perhitungan gizi, 14 CLI end-to-end) —
+semuanya harus lolos sebelum push.
 
 ## Lisensi
 

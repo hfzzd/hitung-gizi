@@ -69,7 +69,9 @@ def _cmd_hitung(args):
                 tampil["porsi"] = f"{args.porsi:g} x {makanan['porsi']}"
         elif args.gram is not None:
             hasil = hitung_gizi(makanan, args.gram)
-            tampil = makanan
+            # Label porsi umum hanya bila beratnya sama persis dengan
+            # satu porsi, kalau tidak label itu menyesatkan.
+            tampil = makanan if args.gram == makanan["porsi_g"] else None
         else:
             hasil = hitung_porsi(makanan, 1)
             tampil = makanan
