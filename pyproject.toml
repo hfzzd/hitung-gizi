@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "hitung-gizi"
-version = "0.1.0"
+version = "0.2.0"
 description = "Kalkulator gizi makanan Indonesia berbasis TKPI: cari makanan, hitung kalori & makro per porsi, catat makan harian."
 readme = "README.md"
 requires-python = ">=3.9"

@@ -104,7 +104,7 @@ class TestCLI(unittest.TestCase):
     def test_version(self):
         hasil = self._jalankan("--version")
         self.assertEqual(hasil.returncode, 0)
-        self.assertIn("HitungGizi 0.1.0", hasil.stdout)
+        self.assertIn("HitungGizi 0.2.0", hasil.stdout)
 
 
 class TestCLICatat(unittest.TestCase):
